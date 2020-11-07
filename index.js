@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
+import luxon from 'luxon';
 import twilio from 'twilio';
 
 const SHARED_HEALTH_USERNAME = process.env.SHARED_HEALTH_USERNAME;
@@ -63,7 +64,8 @@ if (!resultsResponse.ok) {
 
 const resultsJson = await resultsResponse.json();
 const firstResult = resultsJson.data.patientResults.results[0];
-const resultString = `Result at ${firstResult.resultDate}: ${firstResult.result}`;
+const resultDate = luxon.DateTime.fromISO(firstResult.resultDate).toFormat('LLL d, yyyy');
+const resultString = `Result at ${resultDate}: ${firstResult.result}`;
 
 try {
     const lastResultString = fs.readFileSync(LAST_RESULT_FILE_PATH);

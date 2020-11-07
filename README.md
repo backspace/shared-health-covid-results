@@ -6,7 +6,7 @@ On first run, it just stores the result for the next run without txting.
 
 *Warning*: I’ve never run this on an account that’s never had a test result! So this will probably break. But I’ve made a guess that it’ll return an empty array, so maybe it’ll work 🤔
 
-Requirements:
+## Requirements
 
 * Node (14.9.0, but you can use [Volta](https://volta.sh/))
 * A Shared Health account and these environment variables:
@@ -17,3 +17,11 @@ Requirements:
   * `TWILIO_AUTH_TOKEN`
   * `TWILIO_ORIGIN_NUMBER`: number to txt from
   * `TWILIO_DESTINATION_NUMBER`: number to txt, probably your own!
+
+## Running
+
+```
+node index.js
+```
+
+It should print some messages about its behaviour.

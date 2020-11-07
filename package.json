@@ -1,0 +1,17 @@
+{
+  "name": "shared-health-covid-results",
+  "version": "0.1.0",
+  "description": "Check the Shared Health COVID results site and txt if it has changed",
+  "main": "index.js",
+  "repository": "https://github.com/backspace/shared-health-covid-results",
+  "author": "Buck Doyle",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "twilio": "^3.51.0"
+  },
+  "volta": {
+    "node": "14.9.0"
+  }
+}

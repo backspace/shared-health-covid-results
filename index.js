@@ -64,8 +64,15 @@ if (!resultsResponse.ok) {
 
 const resultsJson = await resultsResponse.json();
 const firstResult = resultsJson.data.patientResults.results[0];
-const resultDate = luxon.DateTime.fromISO(firstResult.resultDate).toFormat('LLL d, yyyy');
-const resultString = `Result at ${resultDate}: ${firstResult.result}`;
+
+let resultString = '';
+
+if (firstResult) {
+    const resultDate = luxon.DateTime.fromISO(firstResult.resultDate).toFormat('LLL d, yyyy');
+    resultString = `Result at ${resultDate}: ${firstResult.result}`;
+} else {
+    console.log('Results array was empty. Assuming no previous test results.');
+}
 
 try {
     const lastResultString = fs.readFileSync(LAST_RESULT_FILE_PATH);

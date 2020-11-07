@@ -4,7 +4,7 @@ This is a short Node.js script that logs in to an existing “Shared Health COVI
 
 On first run, it just stores the result for the next run without txting.
 
-*Warning*: I’ve never run this on an account that’s never had a test result! So this will probably break.
+*Warning*: I’ve never run this on an account that’s never had a test result! So this will probably break. But I’ve made a guess that it’ll return an empty array, so maybe it’ll work 🤔
 
 Requirements:
 

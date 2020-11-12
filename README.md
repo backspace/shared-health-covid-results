@@ -1,6 +1,6 @@
 # Shared Health COVID results checker
 
-This is a short Node.js script that logs in to an existing “Shared Health COVID-19 Online Results Display” account, fetches the results, and txts you via Twilio if the result is changed.
+This is a short Node.js script that logs in to an existing “Shared Health COVID-19 Online Results Display” [account](https://shcord.verosource.com/manitoba/) (white label-esque VeroSource “portal”), fetches the results, and txts you via Twilio if the result is changed.
 
 On first run, it just stores the result for the next run without txting.
 

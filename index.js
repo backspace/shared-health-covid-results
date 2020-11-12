@@ -59,6 +59,7 @@ const resultsResponse = await fetch("https://shcord.verosource.com/manitoba-gate
   });
 
 if (!resultsResponse.ok) {
+    console.log('Error fetching token', resultsResponse);
     throw new Error('Failed to get results', resultsResponse);
 }
 

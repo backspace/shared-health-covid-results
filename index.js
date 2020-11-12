@@ -69,7 +69,7 @@ let resultString = '';
 
 if (firstResult) {
     const resultDate = luxon.DateTime.fromISO(firstResult.resultDate).toFormat('LLL d, yyyy');
-    resultString = `Result at ${resultDate}: ${firstResult.result}`;
+    resultString = `Result from ${resultDate}: ${firstResult.result}`;
 } else {
     console.log('Results array was empty. Assuming no previous test results.');
 }
